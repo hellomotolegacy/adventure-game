@@ -10,6 +10,7 @@
 #include "menu.h"
 
 SDL_Window *window;
+SDL_Renderer *bg;
 
 void CreateWindow()
 {
@@ -18,6 +19,10 @@ void CreateWindow()
 		printf("Window failed to be created.. (%s)", SDL_GetError());
 		SDL_Quit();
 	}
+	bg = SDL_CreateRenderer(window, -1, 0);
+	SDL_SetRenderDrawColor(bg, 0, 0, 0, 255);
+	SDL_RenderClear(bg);
+	SDL_RenderPresent(bg);
 }
 
 int main()

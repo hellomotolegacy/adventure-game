@@ -5,9 +5,11 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
 
+//Local headers
+//#include "states.h"
+
 void DrawMenu()
 {
-	const Uint8 *keys = SDL_GetKeyboardState(NULL);
-	if (keys[SDL_SCANCODE_A])
-		printf("move left pls kthx :D\n");
+	//We'll do menus later..
+	//gameState = STATE_GAME;
 }
